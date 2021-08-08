@@ -1,0 +1,93 @@
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+body {
+  margin: 0px;
+}
+main {
+  position: absolute;
+  right: 0
+}
+.Main_Wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.Gradient_Cover {
+  width: 100vw;
+  background: rgb(255,255,255);
+  background: linear-gradient(235deg, rgba(255,255,255,0) 0%, rgba(255,8,33,0.19) 93%, rgba(255,78,0,0.21) 100%);
+}
+.Content_Wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.Text_Wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.Main-Accent-Outline {
+  height: 60px;
+  width: 250px;
+  border-radius: 22.5px;
+  background-color: #2A2A2A;
+  border:#FF7F3D 2px solid;
+  font-family: urbane-rounded,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #FF7F3D;
+  font-size: 30px;
+  margin-top: 100px;
+  transition-duration: 100ms;
+}
+.Text {
+  margin: 0;
+  font-size: 80px;
+  color:#FF7F3D
+}
+.Bold {
+  font-family: good-times,sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.Light {
+font-family: urbane-rounded,sans-serif;
+font-weight: 300;
+font-style: normal;
+}
+.Main_button:hover {
+  transform: translate(-2px, -2px);
+}
+.Divider {
+  width: 100vw;
+  background-color:#FF7F3D;
+  height: 5px;
+  border-radius: 2px;
+}
+.Info_Wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.Inner_Wrapper {
+  margin: 30px;
+  border-radius: 10px;
+  background-color: rgba(51, 51, 51, 0.404);
+  border: #FF7F3D 1px solid;
+}
+.Info_Text {
+  padding: 10px;
+  color:rgb(199, 199, 199);
+  margin: 0px;
+}
+.Left {
+  align-content: flex-end;
+}
