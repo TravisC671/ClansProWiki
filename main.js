@@ -6,24 +6,30 @@ import * as THREE from 'three';
 const scene = new THREE.Scene();
 
 
+//the values for the camera are (fov, aspect ratio, the near clipping plane, the far clipping plane)
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 20, 10000)
+camera.position.setZ(800)
 
+//sets the render to the canvas object in the index.html
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector( '#bg' ),
   antialias: true
 })
 
+//sets the resolution
 renderer.setPixelRatio( window.devicePixelRatio );
-camera.position.setZ(800)
 
+//sets the renderer to render using the scene and camera
 renderer.render( scene, camera )
 
+//gets the height which is used to distribute the stars
 var body = document.body,
   html = document.documentElement;
 
 var height = Math.max(body.scrollHeight, body.offsetHeight,
   html.clientHeight, html.scrollHeight, html.offsetHeight);
 
+//function to distribute the stars
 function addStar() {
   const geometry = new THREE.SphereGeometry( 1, 3, 2)
   const material = new THREE.MeshBasicMaterial({ color: 0xffffff })
@@ -36,9 +42,14 @@ function addStar() {
   scene.add(star)
 }
 
+//array that loops and calls addStar depending on the height of your monitor.(tbh idk why i did that)
 Array(height).fill().forEach(addStar)
 
 console.log(height)
+
+//moves the camera on the x and y when the page is scrolled
+document.body.onscroll = moveCamera
+
 function moveCamera() {
 
   const t = document.body.getBoundingClientRect().top;
@@ -47,8 +58,7 @@ function moveCamera() {
   camera.position.y = t;
 }
 
-document.body.onscroll = moveCamera
-
+//this is called every frame, allowing the page to be animated as well as resizing the canvas when the window is resized. it does warp the stars but its not too noticable
 function animate() {
   requestAnimationFrame( animate );
   renderer.setSize(window.innerWidth, window.innerHeight)
