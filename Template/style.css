@@ -1,0 +1,66 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+body {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0px;
+  background-image: url('./unknown.png');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size:cover;
+  background-position-y: 10%;
+  display: flex;
+}
+.GlassBg {
+  margin: 2%;
+  width: 100%;
+  background: rgb(255,174,81);
+  background: linear-gradient(158deg, rgba(255,174,81,0.35) 0%, rgba(255,194,253,0.15) 100%);
+  border-radius: 20px;
+}
+.Title {
+  background-color: hsl(0, 0%, 6%);
+  width: fit-content;
+  border-radius: 10px;
+  margin: 2.5%;
+}
+.TitleText {
+  color: rgb(175, 175, 175);
+  font-size: 50px;
+  padding: 5px 10px 5px 10px;
+  margin: 0px;
+}
+.Info {
+  background-color: hsl(0, 0%, 6%);
+  color: rgb(175, 175, 175);
+  margin: 1% 2.5% 0% 2.5%;
+  border-radius: 10px;
+}
+.Subtitle {
+  padding: 10px;
+  font-size: 30px;
+  margin: 0px;
+}
+.InfoText {
+  padding: 10px;
+  font-size: 20px;
+  margin: 0px;
+}
+.BulletText {
+  font-size: 20px;
+  margin: 0px;
+  list-style-type:circle;
+  font-weight: bold;
+}
+.List {
+  padding-bottom: 10px;
+}
+a {
+  color: rgb(175, 175, 175);
+}
